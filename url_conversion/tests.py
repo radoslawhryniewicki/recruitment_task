@@ -21,7 +21,7 @@ class URLConversionViewTestCase(TestCase):
         )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
-            response.json()["shortened_url"], "http://localhost:8000/abcd1"
+            response.json()["shorten_url"], "http://localhost:8000/abcd1"
         )
 
     @patch("url_conversion.views.create_shortener_url")
