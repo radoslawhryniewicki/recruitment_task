@@ -20,9 +20,7 @@ class URLConversionViewTestCase(TestCase):
             self.conversion_url, {"url": "http://example.com/"}, format="json"
         )
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(
-            response.json()["shorten_url"], "http://localhost:8000/abcd1"
-        )
+        self.assertEqual(response.json()["shorten_url"], "http://localhost:8000/abcd1")
 
     @patch("url_conversion.views.create_shortener_url")
     def test_create_shortened_url_returns_400_for_duplication(
@@ -33,7 +31,6 @@ class URLConversionViewTestCase(TestCase):
             self.conversion_url, {"url": "http://example.com/"}, format="json"
         )
         self.assertEqual(response.status_code, 400)
-
 
     @patch("url_conversion.views.get_original_url")
     def test_get_original_url(self, mock_get_original_url):
@@ -51,4 +48,3 @@ class URLConversionViewTestCase(TestCase):
             self.conversion_url, {"url": "http://localhost:8000/abcdd1"}, format="json"
         )
         self.assertEqual(response.status_code, 404)
-
