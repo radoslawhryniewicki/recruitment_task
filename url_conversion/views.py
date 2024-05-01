@@ -1,7 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-
 from .exceptions import URLModelNotInDBException
 from .db import get_shortener_url
 from .serializers import URLShortenerSerializer

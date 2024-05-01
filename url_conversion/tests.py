@@ -7,7 +7,6 @@ from .exceptions import URLModelNotInDBException
 from .models import URLShortener
 
 
-
 class URLConversionViewTestCase(TestCase):
     def setUp(self):
         self.client = APIClient()
