@@ -12,7 +12,7 @@ GET `http://127.0.0.1:8000/url_conversion`
 
 To obtain an original url from shorten url simply write url as a query param e.g.
 
-`http://127.0.0.1:8000/url_conversion?url=http://localhost:8000/abcde1`
+`http://127.0.0.1:8000/url_conversion?shorten_url=http://localhost:8000/abcde1`
 
 POST `http://127.0.0.1:8000/url_conversion/`
 
